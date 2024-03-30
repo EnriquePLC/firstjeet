@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>FIRST JEET | $1JEET</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+<div class="header">
+    <img class="logo" src="logo.jpg">
+</div>
+<div class="nav">
+    <div class="nav_item"><a target="_blank" href="https://twitter.com/1JeetSol">Twitter</a></div>
+    <div class="nav_item"><a target="_blank" href="https://t.me/JeetSolNo1">Telegram</a></div>
+    <div class="nav_item"><a target="_blank" href="#">Chart</a></div>
+</div>
+<div class="audio">
+ <audio controls>
+  <source src="Harry.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+
+<article class="comic">
+  <div class="panel">
+    <p class="text top-left">Once...</p>
+    <p class="text bottom-right">...there was a pregnant mom...</p>
+  </div>
+  <div class="panel">
+    <p class="text top-left">...who...</p>
+    <p class="text bottom-right">...born to quickly...</p>
+  </div>
+  <div class="panel">
+    <p class="speech">...born whit only 5 months...</p>
+  </div>
+  <div class="panel">
+      <p class="text top-left">that place...</p>
+    <p class="text bottom-right">...was called...</p></div>
+  <div class="panel">
+      <p class="speech">FUCK U JEET!</p></div>
+  <div class="panel"></div>
+  <div class="panel"></div>
+  <div class="panel"></div>
+  <div class="panel">
+    <p class="text bottom-right">THE END</p>
+  </div>
+</article>
+
+<canvas id="canvas"></canvas>
+<img class="fly" src="fly.png">
+<style>
+    @font-face {
+    font-family: "comic";
+    src: url(COMIC.TTF) format("truetype");
+}
+
+.comic {
+  display:flex;
+  flex-wrap:wrap;
+  font-family:'comic';
+  padding:1vmin;
+}
+
+.panel {
+  background-color:#fff;
+  border:solid 2px #000;
+  box-shadow:0 6px 6px -6px #000;
+  display:inline-block;
+  flex:1 1;
+  height:266px;
+  margin:1vmin;
+  overflow:hidden;
+  position:relative;
+}
+
+.text {
+  background-color:#fff;
+  border:solid 2px #000;
+  margin:0;
+  padding:3px 10px;
+}
+
+.top-left {
+  left:-6px;
+  position:absolute;
+  top:-2px;
+  transform:skew(-15deg);
+}
+
+.bottom-right {
+  bottom:-2px;
+  position:absolute;
+  right:-6px;
+  transform:skew(-15deg);
+}
+
+.speech {
+  background-color:#fff;
+  border:solid 2px #000;
+  border-radius:12px;
+  display:inline-block;
+  margin:.5em;
+  padding:.5em 1em;
+  position:relative;
+}
+
+.speech:before {
+  border:solid 12px transparent;
+  border-left:solid 12px #000;
+  border-top:solid 12px #000;
+  bottom:-24px;
+  content:"";
+  height:0;
+  left:24px;
+  position:absolute;
+  transform:skew(-15deg);
+  width:0;
+}
+
+.speech:after {
+  border:solid 10px transparent;
+  border-left:solid 10px #fff;
+  border-top:solid 10px #fff;
+  bottom:-19px;
+  content:"";
+  height:0;
+  left:27px;
+  position:absolute;
+  transform:skew(-15deg);
+  width:0;
+}
+
+.panel:nth-child(1) {
+  flex-basis: 320px;
+}
+.panel:nth-child(2) {
+  flex-basis: 320px;
+}
+.panel:nth-child(3) {
+  flex-basis: 320px;
+}
+.panel:nth-child(4) {
+  flex-basis: 320px;
+}
+.panel:nth-child(5) {
+  flex-basis: 320px;
+}
+.panel:nth-child(6) {
+  flex-basis: 320px;
+}
+.panel:nth-child(7) {
+  flex-basis: 320px;
+}
+.panel:nth-child(8) {
+  flex-basis: 320px;
+}
+.panel:nth-child(9) {
+  flex-basis: 200px;
+}
+
+/* background colours */
+
+.panel:nth-child(1) {
+   background-image: url("02.jpg");
+}
+
+.panel:nth-child(2) {
+   background-image: url("03.jpg");
+}
+
+.panel:nth-child(3) {
+   background-image: url("04.jpg");
+}
+
+.panel:nth-child(4) {
+   background-image: url("05.jpg");
+}
+
+.panel:nth-child(5) {
+   background-image: url("06.jpg");
+}
+
+
+.panel:nth-child(6) {
+   background-image: url("07.jpg");
+}
+
+
+.panel:nth-child(7) {
+   background-image: url("08.jpg");
+}
+
+
+.panel:nth-child(8) {
+   background-image: url("09.jpg");
+}
+
+
+.panel:nth-child(9) {
+   background-image: url("10.jpg");
+}
+
+
+.panel:nth-child(10) {
+   background-image: url("11.html");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{padding:0;margin:0;}
+.nav {width:100vw;margin:0 auto;padding-top:15px;}
+.nav_item{width:33%;text-align:center;float:left;}
+.header {padding-top:10px;}
+.audio {margin:0 auto;padding-top:15px;text-align:center;overflow:hidden;clear:both;}
+body {background-color:#fffcc9;}
+a {text-decoration:none; color:black; font-size:1.5rem;font-family:'comic';}
+    img.fly {position:fixed;}
+    .header {width:100vw;margin:0 auto;text-align:center;}
+    .logo {height:150px;}
+    
+    /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .nav{width:1200px;}
+} 
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  $(document).ready(function(){
+    animateIMG();
+    
+});
+ 
+
+function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
+    
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    
+    return [nh,nw];    
+    
+}
+
+function animateIMG(){
+    var newq = makeNewPosition();
+    var oldq = $('img.fly').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('img.fly').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateIMG();        
+    });
+    
+};
+
+function calcSpeed(prev, next) {
+    
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+    var greatest = x > y ? x : y;
+    
+    var speedModifier = 0.1;// control the speed here 
+
+    var speed = Math.ceil(greatest/speedModifier);
+    return speed;
+
+}
+
+  </script>
+</body>
+
+<!-- Mirrored from hogwash.site/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Mar 2024 02:50:57 GMT -->
+</html>
